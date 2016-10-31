@@ -20,4 +20,27 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  layouts:
+    header:
+      logo: "Food & Drink"
+      link_home: "Home"
+      link_help: "Help"
+      link_login: "Login"
+    footer:
+      name: "Food and Drink"     
+      link_about: "About"
+      link_contact: "Contact"
+  base_title: "Food and Drink"
+  static_pages:
+    home:
+      title: "Home"
+      content: "Home page"
+    help:
+      title: "Help"
+      content: "Help page"
+    contact:
+      title: "Contact"
+      content: "Contact page"
+    about:
+      title: "About"
+      content: "About page"
