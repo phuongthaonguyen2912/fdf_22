@@ -139,3 +139,63 @@ input {
   width: auto;
   margin-left: 0;
 }
+
+/* homepage */
+.sidebar{
+  position: fixed;
+  top: 51px;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  display: block;
+  padding: 20px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #f5f5f5;
+  border-right: 1px solid #eee;
+}
+
+.sidebar .brand {
+  background-color: #E6E6E6;
+  line-height: 50px;
+  font-weight : bold;
+  color: #2E2E2E;
+  display: block;
+  text-align: center;
+  font-size: 14px;
+}
+
+.main{
+  padding: 20px;
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+.category{
+  text-align: center;
+  padding: 10px;
+}
+
+.productbox {
+  background-color:#ffffff;
+  padding:10px;
+  margin-bottom:10px;
+  -webkit-box-shadow: 0 8px 6px -6px  #999;
+  -moz-box-shadow: 0 8px 6px -6px  #999;
+  box-shadow: 0 8px 6px -6px #999;
+}
+
+.name {
+  font-weight:bold;
+  padding:5px 0 5px 0;
+}
+
+.productprice {
+  border-top:1px solid #dadada;
+  padding-top:5px;
+}
+
+.pricetext {
+  font-weight:bold;
+  font-size:1.4em;
+}

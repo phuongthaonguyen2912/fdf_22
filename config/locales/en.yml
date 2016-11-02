@@ -5,15 +5,17 @@ en:
       link_home: "Home"
       link_help: "Help"
       link_login: "Login"
+      link_signup: "Sign up"
     footer:
       name: "Food and Drink"     
       link_about: "About"
       link_contact: "Contact"
-  base_title: "Food and Drink"
+    base_title: "Food and Drink"
   static_pages:
     home:
       title: "Home"
       content: "Home page"
+      brand: "Food & Drink Category"
     help:
       title: "Help"
       content: "Help page"
@@ -40,7 +42,6 @@ en:
       email: "email"
       password: "password"
       password_confirmation: "password_confirmation"     
-
   sessions:
     signup: "Sign up now!"
     login: "Log in"
@@ -57,3 +58,15 @@ en:
     error: "error"
     login_errors: "Invalid email/password combination"
 
+  products:
+    product:
+      button_text: "Buy"
+  
+  number:
+    currency:
+      format:
+        format: "%n%u"
+        unit: "VND"
+        precision: 0
+        delimiter: ","
+        separator: "."
