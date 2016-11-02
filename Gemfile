@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
 gem "rails", "~> 5.0.0", ">= 5.0.0.1"
+gem "bcrypt", "3.1.11"
 gem "bootstrap-sass", "3.3.6"
 gem "mysql2", ">= 0.3.18", "< 0.5"
 gem "puma", "~> 3.0"
