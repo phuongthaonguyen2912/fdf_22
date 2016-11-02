@@ -23,6 +23,7 @@ en:
     about:
       title: "About"
       content: "About page"
+
   shared:
     error_messages:
       content: "The form contains"
@@ -39,3 +40,20 @@ en:
       email: "email"
       password: "password"
       password_confirmation: "password_confirmation"     
+
+  sessions:
+    signup: "Sign up now!"
+    login: "Log in"
+    remember: "Remember me on this computer"
+    new_user: "New user?"
+    account: "Account"
+    logout: "Log out"
+    profile: "Profile"
+
+  flash:
+    login_success: "Welcome to the Food & Drink"
+    find_user_fail: "User not found!"
+    errors: "The form contains"
+    error: "error"
+    login_errors: "Invalid email/password combination"
+
