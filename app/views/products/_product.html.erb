@@ -1,0 +1,14 @@
+<div class="col-md-4 column productbox">
+  <%= link_to "#" do %>
+    <%= image_tag "http://lorempixel.com/400/400/food/1/",
+      class: "img-thumbnail", alt: "#" %>
+    <div class="name"><%= product.name %></div>
+  <% end %>
+  <div class="productprice">
+    <div class="pull-right">
+      <%= link_to t(".button_text"), "#", class: "btn btn-danger btn-sm",
+        role: "button" %>
+    </div>
+    <div class="pricetext"><%= number_to_currency product.price %></div>
+  </div>
+</div>
