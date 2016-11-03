@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
-  before_action :find_user, only: :show
+  before_action :logged_in_user, except: [:new, :create]
+  before_action :find_user, except: [:index, :new, :create]
+  before_action :valid_user, only: [:edit, :update]
 
   def show
 
@@ -11,7 +13,8 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new user_params
-    if @user.save  
+    if @user.save
+      log_in @user
       flash[:success] = t ".flash_success"
       redirect_to root_url
     else
@@ -19,9 +22,22 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    if @user.update_attributes user_params
+      flash[:success] = t "flash.update_success"
+      redirect_to @user
+    else
+      render :edit
+    end
+  end
+
   private
   def user_params
-    params.require(:user).permit :name, :email, :password, :password_confirmation
+    params.require(:user).permit :name, :email, :password,
+      :password_confirmation
   end
 
   def find_user
@@ -30,5 +46,9 @@ class UsersController < ApplicationController
       flash[:danger] = t "flash.find_user_fail"
       redirect_to root_url
     end
+  end
+
+  def valid_user
+    redirect_to root_url unless @user.current_user? current_user
   end
 end

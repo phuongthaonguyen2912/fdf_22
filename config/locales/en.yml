@@ -6,6 +6,11 @@ en:
       link_help: "Help"
       link_login: "Login"
       link_signup: "Sign up"
+      account: "Account"
+      logout: "Log out"
+      profile: "Profile"
+      user: "Users"
+      setting: "Setting"
     footer:
       name: "Food and Drink"     
       link_about: "About"
@@ -37,6 +42,11 @@ en:
       heading: "Sign up"
     create:
       flash_success: "Successfully"
+    edit:
+      title: "Edit my profile"
+      update: "Update your profile"
+      save: "Save change"
+      change: "Change"
     form:
       name: "name"
       email: "email"
@@ -47,21 +57,18 @@ en:
     login: "Log in"
     remember: "Remember me on this computer"
     new_user: "New user?"
-    account: "Account"
-    logout: "Log out"
-    profile: "Profile"
-
   flash:
     login_success: "Welcome to the Food & Drink"
     find_user_fail: "User not found!"
     errors: "The form contains"
     error: "error"
     login_errors: "Invalid email/password combination"
-
+    update_success: "Profile updated"
+    logged_in: "Please Login"
+    login_fails: "Please log in"
   products:
     product:
       button_text: "Buy"
-  
   number:
     currency:
       format:
@@ -70,3 +77,4 @@ en:
         precision: 0
         delimiter: ","
         separator: "."
+
