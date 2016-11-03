@@ -10,4 +10,11 @@ class ApplicationController < ActionController::Base
       redirect_to login_url
     end
   end
+
+  def verify_admin
+    unless current_user.is_admin?
+      flash[:danger] = t "controllers.admin.login.flash.danger"
+      redirect_to login_url
+    end
+  end
 end

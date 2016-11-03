@@ -77,4 +77,22 @@ en:
         precision: 0
         delimiter: ","
         separator: "."
-
+  controllers:
+    flash:
+      delete_success: "User is deleted"
+      delete_error: "User is not deleted"
+    admin:
+      login:
+        flash:
+          danger: "Please login as admin"
+  views:
+    admin:
+      user:
+        index:
+          all_users: "Manage User"
+          delete: "Delete"
+          delete_confirm: "Are you sure?"
+          title: "Manage User"
+          stt: "STT"
+          name: "Username"
+          email: "Email"
