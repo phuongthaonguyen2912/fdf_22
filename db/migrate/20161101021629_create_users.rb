@@ -3,8 +3,9 @@ class CreateUsers < ActiveRecord::Migration[5.0]
     create_table :users do |t|
       t.string :name
       t.string :email
+      t.string :gravatar
       t.string :password_digest
-      t.boolean :is_admin, default: false     
+      t.boolean :is_admin, default: false
       t.string :reset_digest
       t.datetime :reset_send_at
       t.string :remember_digest
