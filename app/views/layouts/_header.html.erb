@@ -6,7 +6,9 @@
         <li><%= link_to t(".link_home"), root_path %></li>
         <li><%= link_to t(".link_help"), "/static_pages/help" %></li>
         <% if logged_in? %>
-          <li><%= link_to t("layout.user"), users_path %></li>
+          <% if current_user.is_admin? %>
+            <li><%= link_to t("layout.header.users"), admin_users_path %></li>
+          <% end %>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <%= t "layout.account" %> <b class="caret"></b>
