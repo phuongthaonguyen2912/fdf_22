@@ -51,7 +51,8 @@ en:
       name: "name"
       email: "email"
       password: "password"
-      password_confirmation: "password_confirmation"     
+      password_confirmation: "password_confirmation" 
+
   sessions:
     signup: "Sign up now!"
     login: "Log in"
@@ -77,6 +78,7 @@ en:
         precision: 0
         delimiter: ","
         separator: "."
+
   controllers:
     flash:
       delete_success: "User is deleted"
@@ -85,6 +87,18 @@ en:
       login:
         flash:
           danger: "Please login as admin"
+      categories:
+        create:
+          flash_success: "Add category success"
+          flash_danger: "Add category failed"
+        update:
+          flash_success: "Category updated"
+        destroy:
+          flash_success: "Delete category success"
+          flash_danger: "Remove unsuccessful"
+        find:
+          flash_danger: "Category not found"
+
   views:
     admin:
       user:
@@ -96,3 +110,25 @@ en:
           stt: "STT"
           name: "Username"
           email: "Email"
+      categories:
+        category:
+          link_add: "Add"
+          link_edit: "Edit"
+          link_delete: "Delete"
+          delete_confirm: "Are you delete category %{params} "
+        category_form:
+          button_text: "Save"
+        edit:
+          title: "Edit Category"
+          heading: "Edit Category"
+        index:
+          title: "All Categories"
+          heading: "Manage Categories"
+          name: "Name"
+          classify: "Classify"
+          add: "Add"
+          edit: "Edit"
+          delete: "Delete"
+        new:
+          title: "Add Category"
+          heading: "Add Category"
