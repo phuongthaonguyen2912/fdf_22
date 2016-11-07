@@ -98,6 +98,17 @@ en:
           flash_danger: "Remove unsuccessful"
         find:
           flash_danger: "Category not found"
+      products:
+        create:
+          flash_success: "Add product success"
+          flash_danger: "Add product failed"
+        update:
+          flash_success: "Product updated"
+        destroy:
+          flash_success: "Delete product success"
+          flash_danger: "Remove unsuccessful"
+        find:
+          flash_danger: "Product not found"
 
   views:
     admin:
@@ -132,3 +143,33 @@ en:
         new:
           title: "Add Category"
           heading: "Add Category"
+      products:
+        product:
+          link_add: "Add"
+          link_edit: "Edit"
+          link_delete: "Delete"
+          delete_confirm: "Are you delete product %{params} "
+        product_form:
+          button_text: "Save"
+        edit:
+          title: "Edit Product"
+          heading: "Edit Product"
+        index:
+          title: "All Products"
+          heading: "Manage Products"
+          name: "Name"
+          price: "Price"
+          description: "Description"
+          avg_rate: "Avg_rate"
+          image: "Image"
+          add: "Add"
+          edit: "Edit"
+          delete: "Delete"
+        new:
+          title: "Add Product"
+          heading: "Add Product"
+
+  models:
+    product:
+      image_size:
+        error: "should be less than 5MB"

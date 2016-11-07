@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161101140023) do
+ActiveRecord::Schema.define(version: 20161101055331) do
 
   create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "classify_id"
     t.string   "name"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["classify_id"], name: "index_categories_on_classify_id", using: :btree
   end
 
@@ -78,7 +78,7 @@ ActiveRecord::Schema.define(version: 20161101140023) do
     t.integer  "price"
     t.string   "description"
     t.string   "image"
-    t.float    "avg_rate", limit: 24
+    t.float    "avg_rate", limit: 24, default: 0.0
     t.boolean  "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -98,11 +98,11 @@ ActiveRecord::Schema.define(version: 20161101140023) do
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.string   "email"
-    t.boolean  "is_admin"
-    t.string   "phone"
+    t.string   "gravatar"
+    t.string   "password_digest"
+    t.boolean  "is_admin", default: false
     t.string   "reset_digest"
     t.datetime "reset_send_at"
-    t.string   "password_digest"
     t.string   "remember_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
