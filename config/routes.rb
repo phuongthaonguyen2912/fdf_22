@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   resources :users, except: [:index, :destroy]
   namespace :admin do
     resources :users, only: [:index, :destroy]
+    resources :categories, except: :show
   end
 end

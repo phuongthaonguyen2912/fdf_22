@@ -1,0 +1,17 @@
+<tr id="category-<%= category.id %>">
+  <td><%= category.name %></td>
+  <td><%= category.classify_id %></td>
+  <td>
+    <%= link_to t("views.admin.categories.category.link_add"), new_admin_category_path %>
+  </td>
+  <td>
+    <%= link_to t("views.admin.categories.category.link_edit"),
+      edit_admin_category_path(category) %>	
+  </td>
+  <td>
+    <%= link_to t("views.admin.categories.category.link_delete"),
+      [:admin, category], method: :delete, 
+        data: {confirm: t("views.admin.categories.category.delete_confirm", 
+          params: category.name)} %>
+  </td>
+</tr>

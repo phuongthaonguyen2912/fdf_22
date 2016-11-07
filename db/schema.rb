@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161101055331) do
+ActiveRecord::Schema.define(version: 20161101140023) do
 
   create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "classify_id"
@@ -53,8 +53,8 @@ ActiveRecord::Schema.define(version: 20161101055331) do
     t.integer  "order_total"
     t.string   "shipping_address"
     t.datetime "shipping_date"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_orders_on_user_id", using: :btree
   end
 
@@ -66,8 +66,8 @@ ActiveRecord::Schema.define(version: 20161101055331) do
     t.string   "description"
     t.string   "image"
     t.boolean  "is_approve"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_product_suggests_on_category_id", using: :btree
     t.index ["user_id"], name: "index_product_suggests_on_user_id", using: :btree
   end
@@ -78,10 +78,10 @@ ActiveRecord::Schema.define(version: 20161101055331) do
     t.integer  "price"
     t.string   "description"
     t.string   "image"
-    t.float    "avg_rate",    limit: 24
+    t.float    "avg_rate", limit: 24
     t.boolean  "status"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_products_on_category_id", using: :btree
   end
 
@@ -98,14 +98,14 @@ ActiveRecord::Schema.define(version: 20161101055331) do
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.string   "email"
-    t.string   "gravatar"
-    t.string   "password_digest"
-    t.boolean  "is_admin",        default: false
+    t.boolean  "is_admin"
+    t.string   "phone"
     t.string   "reset_digest"
     t.datetime "reset_send_at"
+    t.string   "password_digest"
     t.string   "remember_digest"
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_foreign_key "categories", "classifies"
