@@ -1,0 +1,22 @@
+<%= provide :title, t("views.admin.products.index.title") %>
+<h1><%= t "views.admin.products.index.heading" %></h1>
+<div class="list_product">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th><%= t "views.admin.products.index.name" %></th>
+        <th><%= t "views.admin.products.index.price" %></th>
+        <th><%= t "views.admin.products.index.description" %></th>
+        <th><%= t "views.admin.products.index.avg_rate" %></th>
+        <th><%= t "views.admin.products.index.image" %></th>
+        <th><%= t "views.admin.products.index.add" %></th>
+        <th><%= t "views.admin.products.index.edit" %></th>
+        <th><%= t "views.admin.products.index.delete" %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render @products %>
+    </tbody>
+  </table>
+</div>
+<%= will_paginate @products %>
