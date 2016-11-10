@@ -13,4 +13,5 @@ Rails.application.routes.draw do
     resources :categories, except: :show
     resources :products, except: :show
   end
+  resources :product_suggests, except: :show
 end

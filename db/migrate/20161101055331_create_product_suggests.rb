@@ -7,7 +7,6 @@ class CreateProductSuggests < ActiveRecord::Migration[5.0]
       t.integer :price
       t.string :description
       t.string :image
-      t.boolean :is_approve
 
       t.timestamps
     end
