@@ -65,6 +65,7 @@ ActiveRecord::Schema.define(version: 20161101055331) do
     t.integer  "price"
     t.string   "description"
     t.string   "image"
+    t.integer  "status", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_product_suggests_on_category_id", using: :btree

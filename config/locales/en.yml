@@ -11,7 +11,6 @@ en:
       profile: "Profile"
       user: "Users"
       setting: "Setting"
-      product_suggests: "Suggest Product"
 
     footer:
       name: "Food and Drink"     
@@ -111,6 +110,14 @@ en:
           flash_danger: "Remove unsuccessful"
         find:
           flash_danger: "Product not found"
+      product_suggests:
+         not_found: "Cannot find product suggests"
+         destroy_success: "Product Suggests is deleted"
+         destroy_error: "Product Suggests is not deleted"
+         action_success: "Action is success"
+         waiting: "waiting"
+         accept: "accept"
+         deny: "deny"
     product_suggests:
       create_success: "Suggest is created"
       destroy_success: "Suggests is deleted"
@@ -151,6 +158,14 @@ en:
         new:
           title: "Add Category"
           heading: "Add Category"
+      product_suggests:
+        index:
+          title: "Manage Product Suggests"
+          delete_button: "Delete"
+          action: "Accept Product Suggests"
+          delete_confirm: "Are you sure ?"
+          action: "Action"
+          control: "Control Product Suggests"
       products:
         product:
           link_add: "Add"
@@ -179,7 +194,7 @@ en:
     product_suggests:
       save_button: "Save"
       index:
-        user_suggest: "Suggest Product"
+        user_suggest: "Product Suggest"
         id: "STT"
         name: "Product Name"
         price: "Price"
@@ -189,9 +204,11 @@ en:
         delete_confirm: "Are you sure?"
         save_confirm: "Are you sure?"
         new_button: "New suggest"
+        status : "Status"
       new:
         title: "Product Suggest"
       edit:
+        submit: "Accept"
         title: "Edit Product Suggest"
   models:
     product:
