@@ -1,9 +1,8 @@
 class CategoriesController < ApplicationController
   before_action :find_category, only: :show
-  
+ 
   def show
-    @categories = Category.all
-    @products = @category.products
+    @supports = Supports::CategorySupport.new @category
   end
 
   private

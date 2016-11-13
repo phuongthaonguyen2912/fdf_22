@@ -2,7 +2,7 @@ class Admin::OrdersController < ApplicationController
   before_action :logged_in_user
   before_action :verify_admin
   before_action :find_order, except: [:index]
-  before_action :load_status, only: [:edit]
+  # before_action :load_status, only: [:edit]
 
   def index
     @orders = Order.order_by_time
@@ -39,8 +39,8 @@ class Admin::OrdersController < ApplicationController
     end
   end
 
-  def load_status
-    @order_statuses = Order.statuses.
-      map{|key, value| [t("controllers.admin.orders.#{key}"), key]}
-  end
+  # def load_status
+  #   @order_statuses = Order.statuses.
+  #     map{|key, value| [t("controllers.admin.orders.#{key}"), key]}
+  # end
 end

@@ -8,14 +8,27 @@
       <lable><%= t ".avg_rate" %></lable>
       <%= @product.avg_rate %>
     </li>
-    <li class="price_prd"><%= number_to_currency @product.price %></li>
-    <li class="des_prd"><%= @product.description %></li>
+    <%= form_for @product_support.order_item, remote: true do |f| %>
+      <li class="price_prd"><%= number_to_currency @product.price %></li>
+      <li class="des_prd"><%= @product.description %></li>
+      <li>
+        <div class="input-group">
+          <%= f.number_field :quantity,
+            class: "form-control", min: Settings.min_quantity,
+            placeholder: t(".enter_a_number"), required: :required %>
+          <div class="input-group-btn">
+            <%= f.hidden_field :product_id, value: @product.id %>
+            <%= f.submit t(".btn_text"), class: "btn btn-primary" %>
+          </div>
+        </div> 
+      </li>
+    <% end %>        
     <li class="comment">
       <label><%= t ".comments" %></label>
       <%= render "comments/comment_form" %>
       <div id="comments">
-        <%= render @comments %>
-        <%= will_paginate @comments %>
+        <%= render @product_support.all_comment %>        
+        <%= will_paginate @product_support.all_comment %>
       </div>
     </li>
   </div>

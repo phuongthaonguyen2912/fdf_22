@@ -249,6 +249,11 @@ input {
   font-size:20px;
 }
 
+.input-group{
+  width:150px;
+  margin-top:10px;
+}
+
 .comment{
   margin-top:50px;
 }
@@ -376,4 +381,118 @@ li {
   margin-bottom: 30px;
   font-weight: bold;
   font-size: 1.2em;
+}
+
+.shopping-cart{
+  margin-top:100px;
+}
+
+.cart_heading{
+  text-align:center;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.cart-text{
+  margin:0px;
+  font-weight:bold;
+  letter-spacing:0px;
+}
+
+.navbar-inverse .btn-link{
+  color:white;
+}
+
+.well .row ul{
+  list-style-type:none;
+}
+.well .row ul li{
+  padding-top:5px;
+  text-align:left;
+}
+
+/* Order_detail */
+
+.order_detail {
+  .container{
+    margin-bottom  :200px;
+  }
+
+  .infor{
+    margin-top:50px;
+  }
+
+  select{
+    height : 50px;
+  }
+  h5{
+    text-align : center;
+    padding-top : 30px;
+    padding-bottom : 20px;
+    
+  }
+  h4{
+    color :darkslategray;
+    text-align : center;
+    border-bottom : 0.5px solid #DADADA;
+    padding-top:20px;
+    padding-bottom:20px;
+  }
+  .bill{
+    background : #FAFAFA;
+    border : 1px solid #DADADA;
+    margin-top:50px;
+  }
+  .infor-prds table tr td img{
+    width : 70px;
+    height : 70px;
+    border:1px solid #DADADA;
+    margin-bottom : 20px;
+  }
+  .infor-prds table tr td{
+    text-transform : lowercase;
+    font-size: 1.2em;
+  }
+  .infor-prds{
+    border-bottom : 0.5px solid #DADADA;
+  }
+  .total{
+    padding-top : 30px;
+    text-align:center;
+    font-weight: bold;
+    font-size: 1.5em;
+
+  }
+  .total tr td{
+    padding-bottom : 20px;
+  }
+  .total tr td:nth-child(2){
+    padding-left : 100px;
+  }
+}
+
+.bill .btn-primary{
+  width:200px;
+  margin-top:50px;
+  margin-bottom:20px;
+  margin-left:80px;
+}
+.bill .btn-danger{
+  color: white;
+  width:200px;
+  margin-top:50px;
+  margin-bottom:20px;
+}
+
+.cart_total{
+  padding-top:30px;
+  padding-bottom:20px;
+  text-align:center;
+  font-weight:bold;
+  font-size:1.5em;
+  text-align:right;
+}
+
+.cart_button{
+  text-align:center;
 }

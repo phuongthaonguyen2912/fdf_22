@@ -2,7 +2,7 @@ class Admin::ProductsController < ApplicationController
   before_action :logged_in_user
   before_action :verify_admin
   before_action :find_product, only: [:edit, :update, :destroy]
-  before_action :load_categories, only: [:index, :new, :edit]
+  before_action :load_categories, except: [:destroy]
   
   def index
     @products = Product.all.paginate page: params[:page],

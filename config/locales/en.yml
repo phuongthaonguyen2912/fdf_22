@@ -23,6 +23,9 @@ en:
       title: "Admin"
       placeholder: "Search ... "
 
+    cart_text:
+      text: "%{params} Items in Cart %{params1}"
+
   static_pages:
     home:
       title: "Home"
@@ -141,9 +144,31 @@ en:
     comments:
       valid_comment:
         flash: "Comment not found"
+      find_product:
+        flash: "Product not found"
     categories:
       show:
         flash: "Category not found"
+    orders:
+      update:
+        flash_success: "Order Success"
+        flash_danger: "Create order fails"
+    order_items:
+      create:
+        flash_success: "Add order_item success"
+        flash_danger: "Add order_item fail"
+      update:
+        flash_success: "update order_item success"
+        flash_danger: "update order_item fail"
+        flash: "OrderItem not found"
+      find_order:
+        flash: "Order not found"
+      destroy:
+        flash_success: "Delete order_item success"
+        flash_danger: "Delete order_item fail"
+    carts:
+      destroy:
+        flash_danger: "Canceled order"
 
   admin:
     orders:
@@ -154,7 +179,7 @@ en:
         quantity: "Quantity"
         price: "Price"
         total: "Total"
-      shipping_infomation:
+      shippithoichanTheng_infomation:
         receiver_name: "Receiver Name"
         shipping_address: "Shipping Address"
         shipping_date: "Shipping Date"
@@ -298,11 +323,37 @@ en:
     product_detail:
       avg_rate: "Average rate"
       comments: "Comments"
+      btn_text: "Add to cart"
+      enter_a_number: "Enter a number"
     product:
-      button_text: "Buy"
+      btn_text: "Add to cart"
+      enter_a_number: "Enter a number"
+
+  carts:
+    cart_row:
+      btn_submit: "Update Quantity"
+      link_delete: "Delete"
+      confirm: "Are you sure delete the product 
+        %{params} from your cart?"
+      unit_price: "Unit price : %{params}"
+
+    shopping_cart:
+      cart: "Cart"
+      total_price: "Total price : %{total_price}"
+      link_home: "Shopping continue"
+      link_payment: "Payment"
+      message: "There are no items in your shopping cart."
+      
+  orders:
+    show:
+      btn_submit: "ĐẶT HÀNG"
+      link_delete: "HUY ĐẶT HÀNG"
+      confirm: "Are you sure  delete order ?"
+      order: "Order"
+      order_infor: "Order information"
+      total_price: "Total price : %{total_price}"
 
   models:
     product:
       image_size:
         error: "should be less than 5MB"
-
