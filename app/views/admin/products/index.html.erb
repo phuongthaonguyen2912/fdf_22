@@ -1,7 +1,8 @@
 <%= provide :title, t("views.admin.products.index.title") %>
 <h1><%= t "views.admin.products.index.heading" %></h1>
 <div class="list_product">
-  <table class="table table-striped">
+  <%= render "layouts/search_form" %>
+  <table class="table table-striped" id="dev-table">
     <thead>
       <tr>
         <th><%= t "views.admin.products.index.name" %></th>
