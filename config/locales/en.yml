@@ -23,6 +23,9 @@ en:
       title: "Admin"
       placeholder: "Search ... "
 
+    cart_text:
+      text: "%{order_items_size} Items in Cart %{total_price}"
+
   static_pages:
     home:
       title: "Home"
@@ -141,9 +144,32 @@ en:
     comments:
       valid_comment:
         flash: "Comment not found"
+      find_product:
+        flash: "Product not found"
     categories:
       show:
         flash: "Category not found"
+    orders:
+      update:
+        flash_success: "Order Success"
+        flash_danger: "Create Order fail"
+      find_order:
+        flash: "Order not found"
+    order_items:
+      create:
+        flash_success: "Add order_item success"
+        flash_danger: "Add order_item fail"
+      update:
+        flash_danger: "OrderItem not found"
+        flash_success: "Update Item success"
+      destroy: 
+        flash_success: "Delete Item success"
+        flash_danger: "OrderItem not found"
+      find_order:
+        flash: "Order not found"
+    carts:
+      destroy:
+        flash_danger: "Canceled order"
 
   admin:
     orders:
@@ -293,16 +319,42 @@ en:
     comment_form:
       btn_post: "post"
       placeholder: "Write a comment ..."
-
+   
   products:
     product_detail:
       avg_rate: "Average rate"
       comments: "Comments"
+      btn_text: "Add to cart"
+      enter_a_number: "Enter a number"
     product:
-      button_text: "Buy"
+      btn_text: "Add to cart"
+      enter_a_number: "Enter a number"
+
+  carts:
+    cart_row:
+      btn_submit: "Update Quantity"
+      link_delete: "Delete"
+      confirm: "Are you sure delete the product 
+        %{order_item_name} from your cart?"
+      unit_price: "Unit price : %{price}"
+
+    shopping_cart:
+      cart: "Cart"
+      total_price: "Total price : %{total_price}"
+      link_home: "Shopping continue"
+      link_payment: "Payment"
+      message: "There are no items in your shopping cart."
+      
+  orders:
+    show:
+      btn_submit: "ĐẶT HÀNG"
+      link_delete: "HUY ĐẶT HÀNG"
+      confirm: "Are you sure  delete order ?"
+      order: "Order"
+      order_infor: "Order information"
+      total_price: "Total price : %{total_price}"
 
   models:
     product:
       image_size:
         error: "should be less than 5MB"
-
