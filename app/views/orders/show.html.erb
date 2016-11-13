@@ -1,0 +1,46 @@
+<%= form_for @order, remote: true do |f| %>
+  <div class="container order_detail">
+    <div class="row">  
+      <div class="col-md-4 infor">
+        <h5><b><%= t "orders.show.order_infor" %></b></h5>
+        <%= f.label :shipping_address %>
+        <%= f.text_field :shipping_address, class: "form-control" %>
+        <%= f.label :shipping_date %>
+        <%= f.datetime_select :shipping_date, class: "form-control" %>    
+        <%= f.hidden_field :order_total, value: current_order.subtotal,
+          class: "form-control" %>                 
+      </div>
+      <div class="col-md-2"></div>
+      <div class="col-md-6 bill">
+        <h4><b><%= t "orders.show.order" %></b></h4>
+        <div class="infor-prds">
+          <table>   
+            <% @order_items.each do |order_item| %>
+              <tr>
+                <td class="col-md-3">
+                  <%= image_tag order_item.product.image.url,
+                    class: "image" %>               
+                </td> 
+                <td class="col-md-5">
+                  <%= order_item.product.name %>(<%= order_item.quantity %>)
+                </td>
+                <td class="col-md-4">
+                  <%= number_to_currency order_item.total_price %>               
+                </td>
+              </tr>
+            <% end %>
+          </table>
+        </div>
+        <div class="total">
+          <%= t "orders.show.total_price",
+            total_price: number_to_currency(current_order.subtotal) %>
+        </div>
+        <%= f.submit t("orders.show.btn_submit"),
+          class: "btn btn-primary" %>    
+        <%= link_to t("orders.show.link_delete"), cart_path(@order), 
+          {data: {confirm: t("orders.show.confirm")},
+          method: :delete, remote: true, class: "btn btn-danger"} %>          
+      </div>
+    </div>      
+  </div>
+<% end %>

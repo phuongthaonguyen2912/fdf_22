@@ -1,0 +1,21 @@
+<% if @order_items.any? %>
+  <h3 class="cart_heading"><%= t "carts.shopping_cart.cart" %></h3>
+  <div class="cart_total">  
+    <%= t "carts.shopping_cart.total_price",
+      total_price: number_to_currency(current_order.subtotal) %>
+  </div>
+  <% @order_items.each do |order_item| %>
+    <%= render "carts/cart_row", product: order_item.product,
+      order_item: order_item, show_total: true %>
+  <% end %>
+  <div class="cart_button">
+    <%= link_to t("carts.shopping_cart.link_home"),
+      root_path, class: "btn btn-primary" %></li>
+    <%= link_to t("carts.shopping_cart.link_payment"),
+      order_path(current_order), class: "btn btn-primary" %></li>
+  </div>
+<% else %>
+  <p class="text-center">
+    <%= t "carts.shopping_cart.message" %>
+  </p>
+<% end %>
