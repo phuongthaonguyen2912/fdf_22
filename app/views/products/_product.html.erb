@@ -1,9 +1,8 @@
 <div class="col-md-4 column productbox">
-  <%= link_to "#" do %>
-    <%= image_tag "http://lorempixel.com/400/400/food/1/",
-      class: "img-thumbnail", alt: "#" %>
+  <%= link_to product_path(product) do %>
+    <%= image_tag product.image.url, class: "home_image_prd" %>
     <div class="name"><%= product.name %></div>
-  <% end %>
+  <%end%>
   <div class="productprice">
     <div class="pull-right">
       <%= link_to t(".button_text"), "#", class: "btn btn-danger btn-sm",

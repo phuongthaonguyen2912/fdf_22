@@ -118,6 +118,13 @@ en:
       flash_success: "Update Succesful"
       flash_danger: "Product Suggest not found"
 
+    products:
+      find_product:
+        flash: "Product not found"
+    comments:
+      valid_comment:
+        flash: "Comment not found"
+
   views:
     admin:
       user:
@@ -193,6 +200,18 @@ en:
         title: "Product Suggest"
       edit:
         title: "Edit Product Suggest"
+    comments:
+      comment:
+        posted: "Posted %{params} ago"
+        delete: "Delete"
+      comment_form:
+        btn_post: "post"
+        placeholder: "Write a comment ..."
+    products:
+      product_detail:
+        avg_rate: "Average rate"
+        comments: "Comments"
+
   models:
     product:
       image_size:

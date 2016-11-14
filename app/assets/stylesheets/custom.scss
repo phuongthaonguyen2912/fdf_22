@@ -205,3 +205,79 @@ input {
   width:50px;
   height:50px;
 }
+
+.home_image_prd{
+  width:250px;
+  height:200px;
+}
+/* Show product detail */
+.infor_prd{
+  padding-top:50px;
+  line-height: 1.8;
+}
+.infor_prd li{
+  list-style-type:none;
+}
+.image_prd{
+  width:350px;
+  height:350px;
+  padding:10px;
+  border:1px solid #CCCCCC;	
+}
+.image_prd:hover{
+  -ms-transform:scale(1.02);
+  -webkit-transform:scale(1.02);
+  transform:scale(1.02);
+}
+.name_prd{
+  font-weight:bold;
+  font-size:30px;
+}
+.price_prd{
+  color:red;
+  font-size:20px;
+  font-weight:bold;
+}
+.des_prd{
+  font-size:20px;
+}
+.comment{
+  margin-top:50px;
+}
+
+/* Comment */
+.btn_post{
+  width:70px;
+  float:right;
+}
+
+.comments {
+  list-style: none;
+  padding: 0;
+  }
+li {
+  padding: 10px 0;
+  border-top: 1px solid #e8e8e8;
+}
+.user {
+  margin-top: 5em;
+  padding-top: 0;
+}
+.content {
+  display: block;
+  margin-left: 60px;
+  img {
+    display: block;
+    padding: 5px 0;
+  }
+}
+.timestamp {
+  color: $gray-light;
+  display: block;
+  margin-left: 60px;
+}
+.gravatar {
+  float: left;
+  margin-right: 10px;
+  margin-top: 5px;
+}
