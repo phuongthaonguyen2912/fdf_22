@@ -11,6 +11,8 @@ class Product < ApplicationRecord
   validates :price, presence: true, numericality: {only_integer: true}
   validate :image_size
 
+  scope :newest_product, ->{order created_at: :desc}
+
   private
   def image_size
     if image.size > Settings.size_image.megabytes

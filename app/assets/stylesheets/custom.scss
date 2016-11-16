@@ -168,7 +168,7 @@ input {
 .main{
   padding: 20px;
   padding-right: 40px;
-  padding-left: 40px;
+  padding-left: 20px;
 }
 
 .category{
@@ -210,37 +210,45 @@ input {
   width:250px;
   height:200px;
 }
+
 /* Show product detail */
 .infor_prd{
   padding-top:50px;
   line-height: 1.8;
 }
+
 .infor_prd li{
   list-style-type:none;
 }
+
 .image_prd{
   width:350px;
   height:350px;
   padding:10px;
   border:1px solid #CCCCCC;	
 }
+
 .image_prd:hover{
   -ms-transform:scale(1.02);
   -webkit-transform:scale(1.02);
   transform:scale(1.02);
 }
+
 .name_prd{
   font-weight:bold;
   font-size:30px;
 }
+
 .price_prd{
   color:red;
   font-size:20px;
   font-weight:bold;
 }
+
 .des_prd{
   font-size:20px;
 }
+
 .comment{
   margin-top:50px;
 }
@@ -254,15 +262,18 @@ input {
 .comments {
   list-style: none;
   padding: 0;
-  }
+}
+
 li {
   padding: 10px 0;
   border-top: 1px solid #e8e8e8;
 }
+
 .user {
   margin-top: 5em;
   padding-top: 0;
 }
+
 .content {
   display: block;
   margin-left: 60px;
@@ -271,13 +282,98 @@ li {
     padding: 5px 0;
   }
 }
+
 .timestamp {
   color: $gray-light;
   display: block;
   margin-left: 60px;
 }
+
 .gravatar {
   float: left;
   margin-right: 10px;
   margin-top: 5px;
+}
+
+/* Search form */
+.panel{
+  border: 0px;
+}
+
+.clickable{
+  cursor: pointer;   
+}
+
+.panel-heading div {
+  margin-top: -18px;
+  font-size: 15px;
+}
+
+.panel-heading div span{
+  margin-left:5px;
+}
+
+.panel-body{
+  display: none;
+}
+
+/* newest_product */
+
+.carousel {
+  position: relative;
+}
+
+.controllers {
+  position: absolute;
+  top: 50px;
+}
+
+.carousel-caption {
+ left: 20%;
+ right: 20%;
+ padding-bottom: 50px;
+}
+
+.carousel-control.left, 
+.carousel-control.right {
+  background-image: none;
+}
+
+.carousel-caption{
+  position: relative;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: #000;
+  text-align: center;
+  text-shadow: none;
+  line-height: 1.8;
+}
+
+.carousel-caption h2{
+  font-weight: bold;
+  font-size: 1.4em;
+  text-align: center;
+}
+
+.carousel-indicators{
+  bottom: 10px;
+}
+
+.carousel-inner .item img{
+  width: 100%;
+  height: 300px;
+}
+
+/* show product -category */
+.toolbar{
+  background: lightgray;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 1.2em;
 }

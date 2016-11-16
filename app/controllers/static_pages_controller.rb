@@ -3,6 +3,7 @@ class StaticPagesController < ApplicationController
     if valid_page?
       @products = Product.all
       @categories = Category.all
+      @newest_products = Product.newest_product.limit(Settings.newest_products)
       render template: "static_pages/#{params[:page]}"
     else
       render file: "public/404.html", status: :not_found
