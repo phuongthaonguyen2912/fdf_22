@@ -17,6 +17,6 @@
   <%= f.select :category_id, @categories.collect{|category|
     [category.name, category.id]} %>
 
-  <%= f.submit t("views.admin.products.product_form.button_text"), 
+  <%= f.submit t(".button_text"),
     class: "btn btn-primary" %>
 <% end %>

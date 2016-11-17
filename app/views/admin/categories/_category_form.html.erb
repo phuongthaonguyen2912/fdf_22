@@ -8,6 +8,6 @@
   <%= f.select :classify_id, @classifies.collect{|classify|
     [classify.name, classify.id]} %>
 
-  <%= f.submit t("views.admin.categories.category_form.button_text"), 
+  <%= f.submit t(".button_text"),
     class: "btn btn-primary" %>
 <% end %>
