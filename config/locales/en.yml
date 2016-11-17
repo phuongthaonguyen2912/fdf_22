@@ -9,9 +9,10 @@ en:
       account: "Account"
       logout: "Log out"
       profile: "Profile"
-      user: "Users"
+      users: "Users"
+      login: "Login"
       setting: "Setting"
-
+      product_suggests: "Product Suggest"
     footer:
       name: "Food and Drink"     
       link_about: "About"
@@ -20,6 +21,7 @@ en:
     search_form:
       title: "Admin"
       placeholder: "Search ... "
+
   static_pages:
     home:
       title: "Home"
@@ -55,13 +57,14 @@ en:
       name: "name"
       email: "email"
       password: "password"
-      password_confirmation: "password_confirmation" 
+      password_confirmation: "password_confirmation"
 
   sessions:
     signup: "Sign up now!"
     login: "Log in"
     remember: "Remember me on this computer"
     new_user: "New user?"
+
   flash:
     login_success: "Welcome to the Food & Drink"
     find_user_fail: "User not found!"
@@ -71,9 +74,7 @@ en:
     update_success: "Profile updated"
     logged_in: "Please Login"
     login_fails: "Please log in"
-  products:
-    product:
-      button_text: "Buy"
+
   number:
     currency:
       format:
@@ -127,7 +128,6 @@ en:
       destroy_error: "Suggests is not deleted"
       flash_success: "Update Succesful"
       flash_danger: "Product Suggest not found"
-
     products:
       find_product:
         flash: "Product not found"
@@ -138,108 +138,133 @@ en:
       show:
         flash: "Category not found"
 
-  views:
-    admin:
-      user:
-        index:
-          all_users: "Manage User"
-          delete: "Delete"
-          delete_confirm: "Are you sure?"
-          title: "Manage User"
-          stt: "STT"
-          name: "Username"
-          email: "Email"
-      categories:
-        category:
-          link_add: "Add"
-          link_edit: "Edit"
-          link_delete: "Delete"
-          delete_confirm: "Are you delete category %{params} "
-        category_form:
-          button_text: "Save"
-        edit:
-          title: "Edit Category"
-          heading: "Edit Category"
-        index:
-          title: "All Categories"
-          heading: "Manage Categories"
-          name: "Name"
-          classify: "Classify"
-          add: "Add"
-          edit: "Edit"
-          delete: "Delete"
-        new:
-          title: "Add Category"
-          heading: "Add Category"
-      product_suggests:
-        index:
-          title: "Manage Product Suggests"
-          delete_button: "Delete"
-          action: "Accept Product Suggests"
-          delete_confirm: "Are you sure ?"
-          action: "Action"
-          control: "Control Product Suggests"
-      products:
-        product:
-          link_add: "Add"
-          link_edit: "Edit"
-          link_delete: "Delete"
-          delete_confirm: "Are you delete product %{params} "
-        product_form:
-          button_text: "Save"
-        edit:
-          title: "Edit Product"
-          heading: "Edit Product"
-        index:
-          title: "All Products"
-          heading: "Manage Products"
-          name: "Name"
-          price: "Price"
-          description: "Description"
-          avg_rate: "Avg_rate"
-          image: "Image"
-          add: "Add"
-          edit: "Edit"
-          delete: "Delete"
-        new:
-          title: "Add Product"
-          heading: "Add Product"
-    product_suggests:
-      save_button: "Save"
+  admin:
+    users:
       index:
-        user_suggest: "Product Suggest"
-        id: "STT"
-        name: "Product Name"
-        price: "Price"
-        description: "Description"
-        cancel_button: "Cancel"
-        edit_button: "Edit"
-        delete_confirm: "Are you sure?"
-        save_confirm: "Are you sure?"
-        new_button: "New suggest"
-        status : "Status"
-      new:
-        title: "Product Suggest"
-      edit:
-        submit: "Accept"
-        title: "Edit Product Suggest"
-    comments:
-      comment:
-        posted: "Posted %{params} ago"
+        all_users: "Manage User"
         delete: "Delete"
-      comment_form:
-        btn_post: "post"
-        placeholder: "Write a comment ..."
+        delete_confirm: "Are you sure?"
+        title: "Manage User"
+        stt: "STT"
+        name: "Username"
+        email: "Email"
+    categories:
+      category:
+        link_add: "Add"
+        link_edit: "Edit"
+        link_delete: "Delete"
+        delete_confirm: "Are you delete category %{params} "
+      category_form:
+        button_text: "Save"
+      edit:
+        title: "Edit Category"
+        heading: "Edit Category"
+      index:
+        title: "All Categories"
+        heading: "Manage Categories"
+        name: "Name"
+        classify: "Classify"
+        add: "Add"
+        edit: "Edit"
+        delete: "Delete"
+      new:
+        title: "Add Category"
+        heading: "Add Category"
+    product_suggests:
+      index:
+        title: "Manage Product Suggests"
+        delete_button: "Delete"
+        action: "Accept Product Suggests"
+        delete_confirm: "Are you sure ?"
+        action: "Action"
+        id: "STT"
+      edit:
+        control: "Control Product Suggests"
+        submit: "Accept"
     products:
+      product:
+        link_add: "Add"
+        link_edit: "Edit"
+        link_delete: "Delete"
+        delete_confirm: "Are you delete product %{params} "
       product_detail:
         avg_rate: "Average rate"
         comments: "Comments"
       newest_products:
         title: "Show newest products"
         description: "Description : %{params}"
+      index:
+        title: "All Products"
+        heading: "Manage Products"
+        name: "Name"
+        price: "Price"
+        description: "Description"
+        avg_rate: "Avg_rate"
+        image: "Image"
+        add: "Add"
+        edit: "Edit"
+        delete: "Delete"
+      new:
+        title: "Add Product"
+        heading: "Add Product"
+      edit:
+        title: "Edit Product"
+        heading: "Edit Product"
+      product_form:
+        button_text: "Save"
     categories:
       show:
         category: "Category / %{params}"
+      category:
+        link_add: "Add"
+        link_edit: "Edit"
+        link_delete: "Delete"
+        delete_confirm: "Are you delete category %{params} "
+      category_form:
+        button_text: "Save"
+      edit:
+        title: "Edit Category"
+        heading: "Edit Category"
+      index:
+        title: "All Categories"
+        heading: "Manage Categories"
+      new:
+        title: "Add Category"
+        heading: "Add Category "
+
+  product_suggests:
+    save_button: "Save"
+    index:
+      user_suggest: "Product Suggest"
+      id: "STT"
+      name: "Product Name"
+      price: "Price"
+      description: "Description"
+      cancel_button: "Cancel"
+      edit_button: "Edit"
+      delete_confirm: "Are you sure?"
+      save_confirm: "Are you sure?"
+      new_button: "New suggest"
+      status : "Status"
+    new:
+      title: "Product Suggest"
+    edit:
+      title: "Edit Product Suggest"
+
+  comments:
+    comment:
+      posted: "Posted %{params} ago"
+      delete: "Delete"
+    comment_form:
+      btn_post: "post"
+      placeholder: "Write a comment ..."
+
+  products:
+    product_detail:
+      avg_rate: "Average rate"
+      comments: "Comments"
+    product:
+      button_text: "Buy"
 
   models:
     product:

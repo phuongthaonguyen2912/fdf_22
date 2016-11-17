@@ -5,18 +5,25 @@
   <td> <%= product_suggest.description %> </td>
   <td> <%= image_tag product_suggest.image, class: "image" %></td>
   <td> <%= product_suggest.status %> </td>
+  <% if product_suggest.waiting? %>
   <td>
-  <span>
-    <%= link_to t("views.product_suggests.index.edit_button"),
+    <%= link_to t("product_suggests.index.edit_button"),
       edit_product_suggest_path(product_suggest),
       class:"btn btn-primary" %>
-  </span>
   </td>
   <td>
-  <span>
-    <%= link_to t("views.product_suggests.index.cancel_button"), product_suggest_path(product_suggest),
-      method: :delete, data: {confirm: t("views.product_suggests.index.delete_confirm")},
+    <%= link_to t("product_suggests.index.cancel_button"), product_suggest_path(product_suggest),
+      method: :delete, data: {confirm: t("product_suggests.index.delete_confirm")},
       class:"btn btn-danger" %>
-  </span>
   </td>
+  <% else %>
+  <td>
+    <%= link_to t("product_suggests.index.edit_button"),
+      product_suggests_path, class:"btn btn-primary", disabled: true %>
+  </td>
+  <td>
+    <%= link_to t("product_suggests.index.cancel_button"), product_suggests_path,
+      class:"btn btn-danger", disabled: true %>
+  </td>
+  <% end %>
 </tr>

@@ -5,10 +5,10 @@
     <%= comment.content %>
   </span>
   <span class="timestamp">
-    <%= t("views.comments.comment.posted", 
+    <%= t(".posted",
       params: time_ago_in_words(comment.created_at)) %>
     <% if logged_in? && comment.user.current_user?(current_user) %>
-      <%= link_to t("views.comments.comment.delete"), 
+      <%= link_to t(".delete"),
         product_comment_path(@product, comment), remote: true, method: :delete %>
     <% end %>
   </span>

@@ -5,13 +5,13 @@
   <div class="col-md-7">
     <li class="name_prd"><%= @product.name %></li>
     <li class="avg_rate_prd">
-      <lable><%= t "views.products.product_detail.avg_rate" %></lable>
+      <lable><%= t ".avg_rate" %></lable>
       <%= @product.avg_rate %>
     </li>
     <li class="price_prd"><%= number_to_currency @product.price %></li>
     <li class="des_prd"><%= @product.description %></li>
     <li class="comment">
-      <label><%= t "views.products.product_detail.comments" %></label>
+      <label><%= t ".comments" %></label>
       <%= render "comments/comment_form" %>
       <div id="comments">
         <%= render @comments %>

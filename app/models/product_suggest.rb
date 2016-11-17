@@ -6,6 +6,8 @@ class ProductSuggest < ApplicationRecord
 
   enum status: [:waiting, :accept, :deny]
 
+  EXCEPTED_ATTRIBUTES = ["user_id", "created_at", "updated_at", "id", "image"]
+
   mount_uploader :image, ImageUploader
 
   validates :name, presence: true, length: {minimum: 6, maximum: 50}
