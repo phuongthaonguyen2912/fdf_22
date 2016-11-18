@@ -17,6 +17,6 @@
   <%= f.select :category_id, @categories.collect{|category|
     [category.name, category.id]} %>
 
-  <%= f.submit t("views.product_suggests.save_button"),
+  <%= f.submit t("product_suggests.save_button"),
     class: "btn btn-primary" %>
 <% end %>

@@ -16,6 +16,10 @@ class Admin::ProductSuggestsController < ApplicationController
     if @product_suggest.update_attributes product_suggest_params
       flash[:success] = t "controllers.admin.product_suggests.action_success"
       redirect_to admin_product_suggests_path
+      if @product_suggest.accept?
+        @product = Product.create! @product_suggest.attributes.without(*ProductSuggest::EXCEPTED_ATTRIBUTES)
+          .merge image: @product_suggest.image
+      end
     else
       load_status
       render :edit
@@ -39,13 +43,13 @@ class Admin::ProductSuggestsController < ApplicationController
   def find_product_suggest
     @product_suggest = ProductSuggest.find_by id: params[:id]
     if @product_suggest.nil?
-      flash[:danger] = t "controller.admin.product_suggests.not_found"
+      flash[:danger] = t "controllers.admin.product_suggests.not_found"
       redirect_to admin_product_suggests_url
     end
   end
 
   def load_status
     @product_suggest_statuses = ProductSuggest.statuses.
-      map{|key, value| [t("controllers.admin.product_suggests.#{key}"), key]}
+      map {|key, value| [t("controllers.admin.product_suggests.#{key}"), key]}
   end
 end

@@ -1,22 +1,22 @@
-<%= provide :title, t("views.product_suggests.index.user_suggest") %>
+<%= provide :title, t(".user_suggest") %>
 
-<h1><%= t "views.product_suggests.index.user_suggest" %></h1>
+<h1><%= t ".user_suggest" %></h1>
 
 <div class="col-md-6 col-md-offset-3 text-center" >
-  <%= link_to t("views.product_suggests.index.new_button"), new_product_suggest_path,
+  <%= link_to t(".new_button"), new_product_suggest_path,
     class: "btn btn-info" %>
 </div>
 
 <table class="table table-hover">
   <tr>
-    <th><%= t "views.product_suggests.index.id" %></th>
-    <th><%= t "views.product_suggests.index.name" %></th>
-    <th><%= t "views.product_suggests.index.price" %></th>
-    <th><%= t "views.product_suggests.index.description" %></th>
-    <th><%= t "views.product_suggests.index.image" %></th>
-    <th><%= t "views.product_suggests.index.status" %></th>
-    <th><%= t "views.product_suggests.index.edit_button" %></th>
-    <th><%= t "views.product_suggests.index.cancel_button" %></th>
+    <th><%= t ".id" %></th>
+    <th><%= t ".name" %></th>
+    <th><%= t ".price" %></th>
+    <th><%= t ".description" %></th>
+    <th><%= t ".image" %></th>
+    <th><%= t ".status" %></th>
+    <th><%= t ".edit_button" %></th>
+    <th><%= t ".cancel_button" %></th>
   </tr>
   <%= render @product_suggests %>
 </table>
