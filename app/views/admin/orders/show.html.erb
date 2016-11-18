@@ -1,0 +1,17 @@
+<% provide :title, t(".title") %>
+<h1><%= t ".title" %></h1>
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="panel panel-primary">
+      <div class="panel-heading text-center"><%= t ".shipping_infomation" %></div>
+      <%= render "shipping_infomation" %>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <div class="panel panel-primary">
+      <div class="panel-heading text-center"><%= t ".order_details" %></div>
+      <%= render "order_details" %>
+    </div>
+  </div>
+</div>

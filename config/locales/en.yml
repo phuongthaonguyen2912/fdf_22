@@ -13,6 +13,7 @@ en:
       login: "Login"
       setting: "Setting"
       product_suggests: "Product Suggest"
+      orders: "Orders"
     footer:
       name: "Food and Drink"     
       link_about: "About"
@@ -89,6 +90,12 @@ en:
       delete_success: "User is deleted"
       delete_error: "User is not deleted"
     admin:
+      orders:
+        update_success: "Update order success"
+        not_found: "Order not found!"
+        waiting: "Waiting"
+        accept: "Accept"
+        deny: "Deny"
       login:
         flash:
           danger: "Please login as admin"
@@ -119,9 +126,9 @@ en:
          destroy_success: "Product Suggests is deleted"
          destroy_error: "Product Suggests is not deleted"
          action_success: "Action is success"
-         waiting: "waiting"
-         accept: "accept"
-         deny: "deny"
+         waiting: "Waiting"
+         accept: "Accept"
+         deny: "Deny"
     product_suggests:
       create_success: "Suggest is created"
       destroy_success: "Suggests is deleted"
@@ -139,6 +146,34 @@ en:
         flash: "Category not found"
 
   admin:
+    orders:
+      order:
+        detail: "Detail"
+      order_detail:
+        product: "Product"
+        quantity: "Quantity"
+        price: "Price"
+        total: "Total"
+      shipping_infomation:
+        receiver_name: "Receiver Name"
+        shipping_address: "Shipping Address"
+        shipping_date: "Shipping Date"
+        status: "Status"
+      edit:
+        control: "Control Orders"
+        submit: "Submit"
+      index:
+        title: "Orders Managament"
+        order_name: "Order Name"
+        order_time: "Order Time"
+        receiver_name: "Receiver Name"
+        shipping_address: "Shipping Address"
+        shipping_date: "Shipping Date"
+        status: "Status"
+      show:
+        title: "Order Detail"
+        order_details: "Order Detail"
+        shipping_infomation: "Shipping Infomation"
     users:
       index:
         all_users: "Manage User"
@@ -180,7 +215,7 @@ en:
         id: "STT"
       edit:
         control: "Control Product Suggests"
-        submit: "Accept"
+        submit: "Submit"
     products:
       product:
         link_add: "Add"
@@ -270,3 +305,4 @@ en:
     product:
       image_size:
         error: "should be less than 5MB"
+
