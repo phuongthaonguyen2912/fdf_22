@@ -1,0 +1,10 @@
+<tr>
+  <td><%= order.user.name %></td>
+  <td><%= order.created_at %></td>
+  <td><%= order.receiver_name %></td>
+  <td><%= order.shipping_address %></td>
+  <td><%= order.shipping_date %></td>
+  <td><%= order.status %></td>
+  <td><%= link_to t(".detail"), admin_order_path(order),
+    class: "btn btn-info" %></td>
+</tr>
