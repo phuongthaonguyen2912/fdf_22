@@ -5,7 +5,7 @@ class Admin::OrdersController < ApplicationController
   before_action :load_status, only: [:edit]
 
   def index
-    @orders = Order.order_by_time
+    @orders = Order.is_ordered.order_by_time
       .paginate page: params[:page], per_page: Settings.per_page
   end
 

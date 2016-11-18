@@ -7,8 +7,7 @@
         <%= f.text_field :shipping_address, class: "form-control" %>
         <%= f.label :shipping_date %>
         <%= f.datetime_select :shipping_date, class: "form-control" %>    
-        <%= f.hidden_field :order_total, value: current_order.subtotal,
-          class: "form-control" %>                 
+        <%= f.hidden_field :order_total, value: current_order.subtotal %>                 
       </div>
       <div class="col-md-2"></div>
       <div class="col-md-6 bill">

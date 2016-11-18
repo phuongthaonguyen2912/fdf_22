@@ -5,7 +5,15 @@
     <%= render "layouts/rails_default" %>
   </head>
   <body>
-    <%= render "layouts/header" %>
+    <% if logged_in? %>
+      <% if current_user.is_admin? %>
+        <%= render "layouts/header_admin" %>
+      <% else %>
+        <%= render "layouts/header_customer" %>
+      <% end %>
+    <% else %>
+       <%= render "layouts/header" %>
+    <% end %>
     <div class="container">
       <% flash.each do |message_type, message| %>
         <%= content_tag :div, message, class: "alert alert-#{message_type}" %>

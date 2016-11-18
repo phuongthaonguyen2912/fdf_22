@@ -2,9 +2,7 @@ class ProductsController < ApplicationController
   before_action :find_product, only: :show
 
   def show
-    @comment = Comment.new
-    @comments = @product.comments.all.order_by_created_at.paginate page: params[:page],
-      per_page: Settings.per_page_comment
+    @product_support = Supports::ProductSupport.new @product, params
   end
 
   private 
@@ -16,3 +14,4 @@ class ProductsController < ApplicationController
     end
   end
 end
+

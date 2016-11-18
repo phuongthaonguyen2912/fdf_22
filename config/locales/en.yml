@@ -275,7 +275,7 @@ en:
         button_text: "Save"
     categories:
       show:
-        category: "Category / %{params}"
+        category: "Category / %{category_name}"
       category:
         link_add: "Add"
         link_edit: "Edit"
