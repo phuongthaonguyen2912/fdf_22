@@ -9,19 +9,19 @@
       <li class="col-md-2"><%= product.name %></li>
       <%= form_for order_item, remote: true do |f| %>
         <li class="col-md-2">
-          <%= t "carts.cart_row.unit_price",
+          <%= t ".unit_price",
             price: number_to_currency(product.price) %>
         </li>
         <li class="col-md-1">
           <%= f.number_field :quantity, value: order_item.quantity.to_i,
-            class: "form-control", min: 1 %>
+            class: "form-control", min: Settings.min_quantity %>
           <%= f.hidden_field :product_id, value: product.id %>
         </li>
-        <li class="col-md-2"><%= f.submit t("carts.cart_row.btn_submit"),
+        <li class="col-md-2"><%= f.submit t(".btn_submit"),
           class: "btn btn-primary" %></li>
         <li class="col-md-1">
-          <%= link_to t("carts.cart_row.link_delete"), order_item,
-            {data: {confirm: t("admin.products.product.delete_confirm",
+          <%= link_to t(".link_delete"), order_item,
+            {data: {confirm: t(".confirm",
             order_item_name: order_item.product.name)}, method: :delete,
             remote: true, class: "btn btn-danger"} %>            
         </li>

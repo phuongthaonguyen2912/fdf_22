@@ -4,10 +4,20 @@
     <div class="name"><%= product.name %></div>
   <%end%>
   <div class="productprice">
-    <div class="pull-right">
-      <%= link_to t("products.product.button_text"), "#", class: "btn btn-danger btn-sm",
-        role: "button" %>
-    </div>
     <div class="pricetext"><%= number_to_currency product.price %></div>
+  </div>
+  <div class="pull-left">
+    <%= form_for @supports.order_item, remote: true do |f| %>
+      <div class="input-group">
+        <%= f.number_field :quantity,
+          class: "form-control", min: Settings.min_quantity,
+          placeholder: t(".enter_a_number"), required: :required %>
+        <div class="input-group-btn">
+          <%= f.hidden_field :product_id, value: product.id %>
+          <%= f.hidden_field :price, value: product.price %>
+          <%= f.submit t(".btn_text"), class: "btn btn-primary" %>
+        </div>
+      </div> 
+    <% end %> 
   </div>
 </div>

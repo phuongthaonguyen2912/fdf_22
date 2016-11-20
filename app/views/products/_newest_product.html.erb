@@ -1,7 +1,7 @@
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
-    <% @newest_products.each_with_index do |product, index| %>
-      <div class="item <% if index == 0 %> active <% end %> ">
+    <% @supports.newest_products.each_with_index do |product, index| %>
+      <div class="item <%= 'active' if index == 0 %>">
         <%= link_to product_path(product) do %>
           <div class="col-sm-7">
             <img class="img-responsive" src="<%= product.image.url %>">
@@ -19,9 +19,9 @@
   </div>
   <div class="controllers col-sm-7 col-xs-12">
     <ol class="carousel-indicators">
-      <% @newest_products.each_with_index do |product, index| %>
-        <li data-target="#carousel-example-generic" data-slide-to=<%= index %>"
-          class="<% if index == 0 %> active <% end %> "></li>
+      <% @supports.newest_products.each_with_index do |product, index| %>
+        <li data-target="#carousel-example-generic" data-slide-to=<%= index %>
+          class="<%= 'active' if index == 0 %>"></li>
       <% end %>
     </ol>
   </div>

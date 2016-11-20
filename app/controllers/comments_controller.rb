@@ -1,9 +1,9 @@
 class CommentsController < ApplicationController
   before_action :logged_in_user, only: [:create,:destroy]
+  before_action :find_product
   before_action :valid_comment, only: :destroy
 
   def create
-    @product = Product.find_by id: params[:product_id]
     @comment = @product.comments.build comment_params
     if @comment.save
       respond_to do |format|
@@ -31,6 +31,14 @@ class CommentsController < ApplicationController
     if @comment.nil?
       flash[:danger] = t "controllers.comments.valid_comment.flash"
       redirect_to product_path @product
+    end
+  end
+
+  def find_product
+    @product = Product.find_by id: params[:product_id]
+    if @product.nil?
+      flash[:danger] = t "controllers.comments.find_product.flash"
+      redirect_to products_path
     end
   end
 end

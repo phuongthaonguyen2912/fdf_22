@@ -1,4 +1,4 @@
-<%= form_for [@product, @comment], remote: true do |f| %>
+<%= form_for [@product, @product_support.comment], remote: true do |f| %>
   <div class="form-group">
     <%= render "shared/error_messages", object: f.object %>
     <%= f.text_field :content,

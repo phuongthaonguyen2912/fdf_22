@@ -1,9 +1,5 @@
 <table class="table shipping_infomation">
   <tr>
-    <th><%= t ".receiver_name" %></th>
-    <td><%= @order.receiver_name %></td>
-  </tr>
-  <tr>
     <th><%= t ".shipping_address" %></th>
     <td><%= @order.shipping_address %></td>
   </tr>
@@ -11,17 +7,5 @@
     <th><%= t ".shipping_date" %></th>
     <td><%= @order.shipping_date %></td>
   </tr>
-  <tr>
-    <th><%= t ".status" %></th>
-    <% if @order.waiting? %>
-      <td>
-        <%= link_to @order.status,
-          edit_admin_order_path(@order) %>
-      </td>
-    <% else %>
-      <td>
-        <%= @order.status %>
-      </td>
-    <% end %>
-  </tr>
 </table>
+
