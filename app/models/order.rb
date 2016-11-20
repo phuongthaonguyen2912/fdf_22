@@ -11,4 +11,8 @@ class Order < ApplicationRecord
   validates :receiver_name, presence: true
   validates :shipping_address, presence: true
   validates :shipping_date, presence: true
+
+  def subtotal
+    order_items.collect.sum {|oi| oi.valid? ? (oi.quantity * oi.price) : 0}
+  end
 end
