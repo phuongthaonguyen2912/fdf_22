@@ -124,6 +124,17 @@ en:
           flash_danger: "Remove unsuccessful"
         find:
           flash_danger: "Product not found"
+      classifies:
+        create:
+          flash_success: "Add classify success"
+          flash_danger: "Add classify failed"
+        update:
+          flash_success: "Classify updated"
+        destroy:
+          flash_success: "Delete classify success"
+          flash_danger: "Remove unsuccessful"
+        find:
+          flash_danger: "Classify not found"
       product_suggests:
          not_found: "Cannot find product suggests"
          destroy_success: "Product Suggests is deleted"
@@ -255,6 +266,7 @@ en:
         title: "Show newest products"
         description: "Description : %{params}"
       index:
+        link_add: "New product"
         title: "All Products"
         heading: "Manage Products"
         name: "Name"
@@ -287,11 +299,33 @@ en:
         title: "Edit Category"
         heading: "Edit Category"
       index:
+        link_add: "New Category"
         title: "All Categories"
         heading: "Manage Categories"
       new:
         title: "Add Category"
         heading: "Add Category "
+        categories:
+      show:
+        category: "Category / %{category_name}"
+    classifies:
+      classify:
+        link_add: "Add"
+        link_edit: "Edit"
+        link_delete: "Delete"
+        delete_confirm: "Are you delete classify %{classify_name} "
+      classify_form:
+        button_text: "Save"
+      edit:
+        title: "Edit classify"
+        heading: "Edit classify"
+      index:
+        link_add: "New classify"
+        title: "All classify"
+        heading: "Manage classifies"
+      new:
+        title: "Add classify"
+        heading: "Add classify" 
 
   product_suggests:
     save_button: "Save"

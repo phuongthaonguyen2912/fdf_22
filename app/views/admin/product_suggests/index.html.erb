@@ -1,45 +1,46 @@
 <%= provide :title, t(".title") %>
-
-<h1><%= t ".title" %></h1>
-
-<table class="table table-hover">
-  <tr>
-    <th><%= t ".id" %></th>
-    <th><%= t ".name" %></th>
-    <th><%= t ".price" %></th>
-    <th><%= t ".description" %></th>
-    <th><%= t ".image" %></th>
-    <th><%= t ".status" %></th>
-    <th><%= t ".action" %></th>
-  </tr>
-  <% @product_suggests.each do |product_suggest| %>
+<h1><%= t ".heading" %></h1>
+<div class="list_product">
+  <%= render "layouts/search_form" %>
+  <table class="table table-hover" id="dev-table">
     <tr>
-      <td><%= product_suggest.id %></td>
-      <td><%= product_suggest.name %></td>
-      <td><%= product_suggest.price %></td>
-      <td><%= product_suggest.description %></td>
-      <td> <%= image_tag product_suggest.image, class: "image" %></td>
-      <% if product_suggest.waiting? %>
-        <td>
-          <%= link_to product_suggest.status,
-            edit_admin_product_suggest_path(product_suggest) %>
-        </td>
-        <td>
-          <%= link_to t(".delete_button"),
-            admin_product_suggest_path(product_suggest), method: :delete,
-            data: {confirm: t(".delete_confirm")},
-            class: "btn btn-danger" %>
-        </td>
-      <% else %>
-        <td>
-          <%= product_suggest.status %>
-        </td>
-        <td>
-          <%= link_to t(".delete_button"), admin_product_suggests_path,
-            class: "btn btn-danger", disabled: true %>
-        </td>
-      <% end %>
+      <th><%= t ".id" %></th>
+      <th><%= t ".name" %></th>
+      <th><%= t ".price" %></th>
+      <th><%= t ".description" %></th>
+      <th><%= t ".image" %></th>
+      <th><%= t ".status" %></th>
+      <th><%= t ".action" %></th>
     </tr>
-  <% end %>
-</table>
-<%= will_paginate @product_suggests %>
+    <% @product_suggests.each do |product_suggest| %>
+      <tr>
+        <td><%= product_suggest.id %></td>
+        <td><%= product_suggest.name %></td>
+        <td><%= product_suggest.price %></td>
+        <td><%= product_suggest.description %></td>
+        <td> <%= image_tag product_suggest.image, class: "image" %></td>
+        <% if product_suggest.waiting? %>
+          <td>
+            <%= link_to product_suggest.status,
+              edit_admin_product_suggest_path(product_suggest) %>
+          </td>
+          <td>
+            <%= link_to t(".delete_button"),
+              admin_product_suggest_path(product_suggest), method: :delete,
+              data: {confirm: t(".delete_confirm")},
+              class: "btn btn-danger" %>
+          </td>
+        <% else %>
+          <td>
+            <%= product_suggest.status %>
+          </td>
+          <td>
+            <%= link_to t(".delete_button"), admin_product_suggests_path,
+              class: "btn btn-danger", disabled: true %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
+  <%= will_paginate @product_suggests %>
+</div>

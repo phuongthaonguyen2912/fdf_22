@@ -1,6 +1,8 @@
 <%= provide :title, t(".title") %>
 <h1><%= t ".heading" %></h1>
 <div class="list_product">
+  <%= link_to t(".link_add"), new_admin_product_path,
+    class: "btn btn-infor add_item"%>
   <%= render "layouts/search_form" %>
   <table class="table table-striped" id="dev-table">
     <thead>
@@ -10,7 +12,6 @@
         <th><%= t ".description" %></th>
         <th><%= t ".avg_rate" %></th>
         <th><%= t ".image" %></th>
-        <th><%= t ".add" %></th>
         <th><%= t ".edit" %></th>
         <th><%= t ".delete" %></th>
       </tr>

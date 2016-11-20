@@ -1,0 +1,11 @@
+<tr id="classify-<%= classify.id %>">
+  <td><%= classify.name %></td>
+  <td>
+    <%= link_to t(".link_edit"),
+      edit_admin_classify_path(classify) %>	
+  </td>
+  <td>
+    <%= link_to t(".link_delete"), [:admin, classify], method: :delete, 
+      data: {confirm: t(".delete_confirm", classify_name: classify.name)} %>
+  </td>
+</tr>

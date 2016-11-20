@@ -6,6 +6,7 @@
     <th><%= t ".stt" %></th>
     <th><%= t ".name" %></th>
     <th><%= t ".email" %></th>
+    <th><%= t ".delete" %></th>
   </tr>
   <% @users.each do |user| %>
     <tr>
@@ -24,4 +25,4 @@
   <% end %>
 </table>
 
-<%= will_paginate %>
+<%= will_paginate @users %>
